@@ -1,0 +1,27 @@
+@model PagedProductList
+@{
+    ViewData["Title"] = "Ürünler";
+    Layout = "_Layout";
+}
+
+
+@foreach(var product in Model.Products) {
+    <h3>@(product.Name)</h3><br />
+    <span>Fiyat: @(product.Price) ₺</span> <br />
+    <small>
+    stok:    
+        - 
+    (Güncelleme: @(product.ModifiedDate.ToString("dd.MM.yyyy HH:mm:ss")))
+
+    </small> 
+    <hr />
+}
+<div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                @for (int i = 1; i <= Model.TotalPage; i++)
+                {
+                    <li>&nbsp;<a href='products?page=@(i)&size=3' @(Model.CurrentPage == i ? "class='active'":"")>@(i)</a> | </li>
+                }    
+              </ul>
+            </div>
+
