@@ -36,5 +36,7 @@ INSERT INTO dbo.Products (Id, Name, Barcode, Price, Quantity, InSales, ModifiedD
 INSERT INTO dbo.Products (Id, Name, Barcode, Price, Quantity, InSales, ModifiedDate) VALUES (8, 'Lenovo V130 Intel Core i3', '890123456', 2420.00, 0, 1, '2019-12-11 21:38:51.0000000');
 INSERT INTO dbo.Products (Id, Name, Barcode, Price, Quantity, InSales, ModifiedDate) VALUES (9, 'Acer Aspire A315-53G Intel Core i3', '901234567', 2799.00, 12, 1, '2019-12-11 21:40:25.0000000');
 INSERT INTO dbo.Products (Id, Name, Barcode, Price, Quantity, InSales, ModifiedDate) VALUES (10, 'MSI Alpha 15 A3DD-023XTR AMD Ryzen 7', '012345678', 8379.00, 1, 1, '2019-12-11 21:44:12.9107133');
+
+INSERT INTO dbo.__EFMigrationsHistory (MigrationId, ProductVersion) VALUES ('20191210192345_Initial', '3.1.0');
 GO
 ```
