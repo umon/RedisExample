@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Cache;
 using DataLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -63,6 +65,9 @@ namespace ConsoleApplication
 
                 if (context.SaveChanges() > 0)
                 {
+                    var redisManager = new RedisCacheManager();
+                    redisManager.RemoveByPattern("*products*");
+
                     Console.WriteLine($"\n!!! Stok başarıyla güncellendi: {product.Name}\n");
                 }
             }

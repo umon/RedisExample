@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Cache;
 using DataLayer;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication.Models;
@@ -30,10 +32,20 @@ namespace WebApplication.Controllers
 
             var totalProductCount = productQuery.Count();
 
-            var products = productQuery
-                .Skip((page - 1) * size)
-                .Take(size)
-                .ToList();
+            var redisManager = new RedisCacheManager();
+            var pagedProductListKey = $"products|page={page}|size={size}";
+
+            var products = redisManager.Get<List<Product>>(pagedProductListKey);
+
+            if (products == null)
+            {
+                products = productQuery
+                    .Skip((page - 1) * size)
+                    .Take(size)
+                    .ToList();
+
+                redisManager.Set(pagedProductListKey, products, 60);
+            }
 
             var pagedProductList = new PagedProductList
             {

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{87428831-8EAC-4A5D-A5EA-A6D9E8AFB268}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache", "Cache\Cache.csproj", "{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{87428831-8EAC-4A5D-A5EA-A6D9E8AFB268}.Release|x64.Build.0 = Release|Any CPU
 		{87428831-8EAC-4A5D-A5EA-A6D9E8AFB268}.Release|x86.ActiveCfg = Release|Any CPU
 		{87428831-8EAC-4A5D-A5EA-A6D9E8AFB268}.Release|x86.Build.0 = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|x64.Build.0 = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Debug|x86.Build.0 = Debug|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|x64.ActiveCfg = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|x64.Build.0 = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|x86.ActiveCfg = Release|Any CPU
+		{502DCCC3-3C9C-415E-BAC5-A37869CCCE78}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
